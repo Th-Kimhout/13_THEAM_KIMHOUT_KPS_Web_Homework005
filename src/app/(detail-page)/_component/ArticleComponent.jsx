@@ -8,11 +8,13 @@ const ArticleComponent = async ({ searchPath }) => {
   const getContent = async () => {
     const type = searchPath.type;
     const title = searchPath.title;
-
+let content ;
     if (type === "cartoon") {
-      return (content = await getCartoonByTitleService(title));
+       content = await getCartoonByTitleService(title);
+      return content;
     }
-    return (content = await getBookByNameService(title));
+     content = await getBookByNameService(title);
+    return content;
   };
   const data = await getContent();
   const { payload } = data;

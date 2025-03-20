@@ -49,7 +49,7 @@ const OldSchoolCartoonsPage = async ({ searchParams }) => {
             />
           </div>
           <div className="flex flex-col pt-6">
-            <p className="font-semibold text-card-color">
+            <p className="font-semibold text-card-color line-clamp-1">
               {cartoon.ct_title || "Unknown"}
             </p>
             <div>
